@@ -1,31 +1,50 @@
 import styles from '../../styles/courses/CourseInfo.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-
-
+import { useEffect, useState } from 'react';
+import { collection, query, getFirestore, where, getDocs } from 'firebase/firestore';
+import { getApp } from 'firebase/app';
+const app = getApp();
+const db = getFirestore(app);
 const CourseInfo = () => {
+    const [course, setCourse] = useState({});
+
+    useEffect(() => {
+        async function getData() {
+            const courseHandle = collection(db, "courses")
+            const q = query(courseHandle, where("name", '==', "Intro to Swift"));
+            const courseSnap = await getDocs(q);
+            let foundCourse = courseSnap;
+            courseSnap.forEach((course) => {
+                foundCourse = course.data()
+            })
+            console.log(Object.keys(foundCourse).length)
+            setCourse(foundCourse);
+        }
+        getData()
+    }, [])
     return (
         <div className={styles.container}>
             <h1>Information</h1>
             <div className={styles.courseMainInfo}>
                 <div className={styles.coursePic}></div>
                 <div>
-                    <h2>Intro to Swift</h2>
+                    <h2>{course.name}</h2>
                     <p>Learn the basics of Swift!</p>
                 </div>
             </div>
             <div className={styles.statsList}>
                 <div className={styles.statsItem}>
                     <h3>Credits</h3>
-                    <p>200</p>
+                    <p>{course.credits}</p>
                 </div>
                 <div className={styles.statsItem}>
                     <h3>Modules</h3>
-                    <p>30</p>
+                    <p>{course.modules}</p>
                 </div>
                 <div className={styles.statsItem}>
                     <h3>Enrolled</h3>
-                    <p>20</p>
+                    <p>3</p>
                 </div>
             </div>
 

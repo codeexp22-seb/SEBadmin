@@ -42,7 +42,7 @@ const MemberList = () => {
                         <td>XENOS ANONG</td>
                         <td>250</td>
                     </tr>
-                    <tr>
+                    <tr style = {{backgroundColor: '#eeeeee'}}>
                         <td>YEE JOHNSON</td>
                         <td>200</td>
                     </tr>
