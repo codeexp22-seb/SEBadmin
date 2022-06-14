@@ -1,15 +1,17 @@
 .main {
     margin-left: max(300px, 22vw);
+   
 
 }
 
 .content {
     margin: 2rem;
     display: flex;
+
 }
 
 .divider {
     border-right: 1px solid #b4b4b4;
     height: 90vh;
-    margin: 2rem;
+    margin: 0 2rem;
 }

@@ -12,12 +12,14 @@
 .groupHeader {
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .groupHeader select {
     border: none;
     font-size: 1.3rem;
     font-weight: 300;
+    outline: none;
 }
 
 .memberHeader {
