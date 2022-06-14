@@ -1,4 +1,5 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { resolveHref } from "next/dist/shared/lib/router/router";
 
 export default async function (req, res) {
     if (req.method !== 'POST') {
@@ -14,12 +15,12 @@ export default async function (req, res) {
    
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        res.status(200).json({ loggedIn: "Logged in successfully!" })
+        res.status(200).send({ loggedIn: "Logged in successfully!" });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        res.status(500).json({ errorCode: errorCode, error: errorMessage });
+        return res.status(500).send({ errorCode: errorCode, error: errorMessage });
       });
     
 }
