@@ -1,7 +1,29 @@
 import styles from '../../styles/home/CourseList.module.css'
+import { getFirestore, collection, getCollection, query, getDocs } from 'firebase/firestore';
+import { getApp } from 'firebase/app';
+import { useEffect, useState } from 'react';
+import { firebaseConfig } from '../../firebase_config';
+const app = getApp();
+const db = getFirestore(app);
 
-const CourseList = () => {
+const CourseList = (props) => {
 
+    const [courses, setCourses] = useState([]);
+
+    useEffect(() => {
+        async function getData() {
+            const courseHandle = collection(db, "courses")
+            const q = query(courseHandle);
+            const courseSnap = await getDocs(q);
+            let coursesArr = [];
+            courseSnap.forEach((course) => {
+                coursesArr.push(course.data());
+            })
+            courses = coursesArr;
+            setCourses(coursesArr);
+        }
+        getData()
+    }, [])
     return (
         <div className={styles.container}>
             <h1>Courses</h1>
@@ -14,14 +36,25 @@ const CourseList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Building a Culture of Respect and Consent</td>
-                        <td>45%</td>
-                    </tr>
-                    <tr>
-                        <td>Intro to Swift</td>
-                        <td>45%</td>
-                    </tr>
+                    {
+                        courses.map((course) => {
+                            
+                            let completions = 0;
+                            let keys = Object.keys(course.enrollments);
+                            for (let key of keys) {
+                                if (course.enrollments[key] === course.modules) {
+                                    completions += 1;
+                                }
+                            }
+                            return <tr>
+                                <td>{course.name}</td>
+                                <td>{`${(completions / keys.length) * 100}%`}</td>
+                            </tr>
+                        })
+
+
+                    }
+                    
                 </tbody>
 
 
