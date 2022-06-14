@@ -1,6 +1,6 @@
 import MemberInfo from '../../components/groups/MemberInfo';
 import MemberList from '../../components/groups/MemberList';
-import styles from '../../styles/groups/Groups.module.css'
+import styles from '../../styles/groups/Groups.module.css';
 
 
 const Groups = () => {
