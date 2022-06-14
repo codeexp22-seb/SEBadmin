@@ -1,0 +1,76 @@
+.container {
+    width: 40%;
+}
+
+.container h1 {
+    color: #000000;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-right: 1.3rem;
+}
+
+.groupHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.groupHeader select {
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 300;
+    outline: none;
+    width: 10rem;
+    white-space: nowrap;
+}
+
+.memberHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filterIcon {
+    cursor: pointer;
+    color: #60A964;
+}
+
+.memberHeader button:hover {
+    text-decoration: underline;
+}
+
+.table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+ 
+
+}
+
+.table td, .table th {
+    padding: 10px 8px;
+}
+
+.table th {
+    background-color: #B7E0B9;
+    font-weight: 600;
+}
+
+
+.table tr :nth-child(1) {
+    text-align: left;
+    width: 65%;
+}
+
+.table tr :nth-child(2) {
+    text-align: right;
+    width: 35%;
+}
+
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #B4B4B4;
+}
+

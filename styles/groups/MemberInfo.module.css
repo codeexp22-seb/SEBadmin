@@ -1,0 +1,113 @@
+.container {
+    width: 50%;
+}
+
+.container h1 {
+    color: #000000;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-right: 1.3rem;
+}
+
+.personalInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.personalInfo h2 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.personalInfo p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #000000;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.profilePic {
+    height: 5.2rem;
+    width: 5.2rem;
+    background-color: #A96060;
+    border-radius: 50%;
+    margin-right: 2.5rem;
+}
+
+.statsList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.statsItem {
+    background-color: #E2FFE4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 8rem;
+
+}
+
+.statsItem h3 {
+    margin: 0.2rem 0;
+    font-weight: 500;
+}
+
+.statsItem p {
+    margin: 0.2rem 0;
+}
+
+
+.table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+ 
+
+}
+
+.table td, .table th {
+    padding: 10px 8px;
+}
+
+.table th {
+    background-color: #B7E0B9;
+    font-weight: 600;
+}
+
+.table tr :nth-child(1) {
+    text-align: left;
+    width: 65%;
+}
+
+.table tr :nth-child(2) {
+    text-align: right;
+    width: 35%;
+}
+
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #B4B4B4;
+}
+
+.courseTypeSelector {
+    margin-bottom: 1rem;
+}
+
+.courseTypeSelector select {
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    width: 11rem;
+   
+}

@@ -1,0 +1,14 @@
+.main {
+    margin-left: max(300px, 22vw);
+
+}
+
+.content {
+    margin: 2rem;
+}
+
+.secondRow {
+    display: flex;
+    width: 100%;
+    gap: 4rem;
+}
