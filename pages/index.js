@@ -13,8 +13,7 @@ export default function Home() {
       body: json
     })
     if (res.status === 200) {
-      // Logged in 
-      // Do something? idk
+      window.location.href = '/dashboard/home/'
       console.log("logged in successfully!")
     } else {
       console.log("Login failed.")
