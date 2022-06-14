@@ -11,7 +11,7 @@ const Navbar = () => {
         <nav className={styles.nav} style={(router.pathname === "/") ? {display:'none'} : {}}>
             <div>
                 <div className={styles.placeholderImage}></div>
-                <h1>SGT YEE JIA CHEN</h1>
+                <h1>CPT YEE JIA CHEN</h1>
                 <div className={styles.menuContainer}>
                     <Link href="/dashboard/home">
                         <div className={styles.menuItem} style={(router.pathname === "/dashboard/home") ? {opacity:'100%'} : {opacity:'30%'}}>
