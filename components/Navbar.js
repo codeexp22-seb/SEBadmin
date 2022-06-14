@@ -30,7 +30,7 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-            <button className={styles.logoutButton}>Log out</button>
+            <Link href="/" className={styles.logoutButton}>Log out</Link>
 
         </nav>
      );
