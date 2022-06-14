@@ -2,7 +2,7 @@ import styles from '../../styles/home/CourseList.module.css'
 import { getFirestore, collection, getCollection, query, getDocs } from 'firebase/firestore';
 import { getApp } from 'firebase/app';
 import { useEffect, useState } from 'react';
-import { firebaseConfig } from '../../firebase_config';
+
 const app = getApp();
 const db = getFirestore(app);
 
@@ -41,11 +41,11 @@ const CourseList = (props) => {
                             
                             let completions = 0;
                             let keys = Object.keys(course.enrollments);
-                            for (let key of keys) {
+                            keys.forEach((key) => {
                                 if (course.enrollments[key] === course.modules) {
                                     completions += 1;
                                 }
-                            }
+                            })
                             return <tr>
                                 <td>{course.name}</td>
                                 <td>{`${(completions / keys.length) * 100}%`}</td>
