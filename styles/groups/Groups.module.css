@@ -1,0 +1,9 @@
+.main {
+    margin-left: max(300px, 22vw);
+
+}
+
+.content {
+    margin: 2rem;
+    display: flex;
+}

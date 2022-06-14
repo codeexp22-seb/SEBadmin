@@ -6,7 +6,9 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from "firebase/firestore";
 import { firebaseConfig } from "../firebase_config"
 config.autoAddCss = false
+
 const app = initializeApp(firebaseConfig);
+
 const store = getFirestore(app);
 function MyApp({ Component, pageProps }) {
   return (

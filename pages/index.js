@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Login.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
             <FontAwesomeIcon icon={faKey} />
               <input type="password" name="password" placeholder="Password" required/>
             </div>
-            <button onClick={loginUser}>Login</button>
+            <button>Login</button>
           </form>
         </div>
       </main>
