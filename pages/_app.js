@@ -3,9 +3,11 @@ import '../styles/globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { initializeApp } from 'firebase/app';
+import { getFirestore } from "firebase/firestore";
 import { firebaseConfig } from "../firebase_config"
 config.autoAddCss = false
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const store = getFirestore(app);
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
