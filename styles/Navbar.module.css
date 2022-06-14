@@ -1,0 +1,48 @@
+.nav {
+    background-color: #60A964;
+    height: 100%;
+    width: 22vw;
+    min-width: 300px;
+    position: fixed;
+    color: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.nav h1 {
+    font-size: 1.6rem;
+}
+
+
+.placeholderImage {
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    height: 7vh;
+    width: 7vh;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItem {
+    font-size: 1.6rem;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 0.4rem 0;
+}
+
+.logoutButton {
+    text-align: left;
+    background: none;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+}
+
