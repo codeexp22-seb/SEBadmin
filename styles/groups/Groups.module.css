@@ -7,3 +7,9 @@
     margin: 2rem;
     display: flex;
 }
+
+.divider {
+    border-right: 1px solid #b4b4b4;
+    height: 90vh;
+    margin: 2rem;
+}
