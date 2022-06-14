@@ -1,9 +1,12 @@
-import Navbar from "../../components/Navbar"
+import GroupList from "../../components/home/GroupList"
+import styles from '../../styles/home/Home.module.css'
+
 
 const Home = () => {
     return (
-        <div>
-        </div>
+        <main className={styles.main}>
+            <GroupList />
+        </main>
     )
 }
 

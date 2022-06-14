@@ -71,7 +71,7 @@
   align-items: center;
 }
 
-.inputContainer i {
+.inputContainer svg {
   color: #a3a3a3;
   margin-right: 12px;
 }
