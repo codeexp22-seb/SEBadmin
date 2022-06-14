@@ -9,7 +9,7 @@ config.autoAddCss = false
 
 const app = initializeApp(firebaseConfig);
 
-const store = getFirestore(app);
+getFirestore(app);
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
