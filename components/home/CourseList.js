@@ -37,7 +37,7 @@ const CourseList = (props) => {
                 </thead>
                 <tbody>
                     {
-                        courses.map((course) => {
+                        courses.map((course, index) => {
                             
                             let completions = 0;
                             let keys = Object.keys(course.enrollments);
@@ -46,7 +46,7 @@ const CourseList = (props) => {
                                     completions += 1;
                                 }
                             })
-                            return <tr>
+                            return <tr key = {index}>
                                 <td>{course.name}</td>
                                 <td>{`${(completions / keys.length) * 100}%`}</td>
                             </tr>
